@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Privacy Policy — CrossPoster</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html"><span class="mark"></span>CrossPoster</a>
+    <nav>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+    </nav>
+  </header>
+
+  <main class="wrap prose">
+    <h1>Privacy Policy</h1>
+    <p class="muted">Last updated: 14 October 2026</p>
+    <p>
+      CrossPoster (“the app”) is a personal, self-hosted tool. The person who
+      installs and runs it is the operator. This policy describes what the app
+      accesses and stores when you connect accounts and publish videos.
+    </p>
+    <p>
+      You should read this policy before connecting any account. Connecting an
+      account means you understand how the app uses that platform’s APIs.
+    </p>
+
+    <h2>YouTube API Services</h2>
+    <p>
+      CrossPoster uses <strong>YouTube API Services</strong> to connect YouTube
+      channels and upload Shorts. Use of YouTube data through this app is also
+      subject to the
+      <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a>
+      and the
+      <a href="https://developers.google.com/youtube/terms/api-services-terms-of-service">YouTube API Services Terms of Service</a>.
+    </p>
+    <p>
+      Google’s own data practices are described in the
+      <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.
+    </p>
+
+    <h2>What the app accesses</h2>
+    <p>Depending on which platforms you connect, the app may access:</p>
+    <ul>
+      <li><strong>YouTube:</strong> your channel identity (name, channel ID, thumbnail) and permission to upload videos to that channel (<code>youtube.upload</code>, <code>youtube.readonly</code>).</li>
+      <li><strong>TikTok:</strong> basic profile info and permission to publish videos you explicitly submit.</li>
+      <li><strong>Instagram:</strong> professional account identity linked to a Facebook Page, and permission to publish Reels you explicitly submit.</li>
+    </ul>
+    <p>
+      The app does not read your subscribers, comments, DMs, or watch history.
+      It does not search YouTube or recommend videos.
+    </p>
+
+    <h2>What is stored, and where</h2>
+    <p>
+      Data is stored on the computer (or server) where you run CrossPoster, in a
+      local SQLite database and local folders. It is not sent to a CrossPoster
+      cloud. There is no CrossPoster company backend.
+    </p>
+    <ul>
+      <li><strong>OAuth access and refresh tokens</strong> — stored encrypted (Fernet). These let the app post on your behalf until they expire or you disconnect.</li>
+      <li><strong>Account labels</strong> — display name, username, avatar URL, platform user ID.</li>
+      <li><strong>Video files you upload</strong> — stored locally for publishing, plus captions, titles, privacy choices, and post history (status, error text, and public video links if a platform returns them).</li>
+      <li><strong>App logs</strong> — technical logs on disk for debugging failed uploads.</li>
+    </ul>
+    <p>
+      The operator of the install can see everything stored on that machine.
+      If you run it only for yourself, that operator is you.
+    </p>
+
+    <h2>How the data is used</h2>
+    <p>Stored data is used only to:</p>
+    <ul>
+      <li>show connected accounts in the UI</li>
+      <li>upload the video and metadata you chose to the accounts you selected</li>
+      <li>refresh expired login tokens</li>
+      <li>show publish status and history</li>
+    </ul>
+    <p>
+      The app does not sell data, run ads, build advertising profiles, or share
+      tokens with third parties other than the official TikTok, Meta, and
+      Google/YouTube APIs needed to publish.
+    </p>
+
+    <h2>Cookies and device data</h2>
+    <p>
+      During OAuth, the local web UI may set a short-lived, httpOnly cookie so
+      the login redirect can finish. That cookie is not used for tracking.
+      The app does not place advertising cookies or analytics SDKs.
+    </p>
+
+    <h2>Revoking access and deletion</h2>
+    <p>You can stop access in two places:</p>
+    <ol>
+      <li>In CrossPoster: Accounts → Disconnect. That deletes the stored tokens for that account from the local database.</li>
+      <li>For Google/YouTube: revoke the app at
+        <a href="https://myaccount.google.com/permissions">Google Account permissions</a>.
+        After you revoke, CrossPoster can no longer call YouTube for that channel until you connect again.
+      </li>
+    </ol>
+    <p>
+      You can also delete the local database file, upload folder, and log folder
+      on the machine running the app to remove stored history.
+    </p>
+
+    <h2>Other platforms</h2>
+    <p>
+      TikTok and Instagram (Meta) have their own terms and privacy policies.
+      Connecting those accounts is optional and uses their official OAuth flows.
+    </p>
+
+    <h2>Contact</h2>
+    <p>
+      This is a personal project. For questions about this policy or stored data,
+      open an issue on the GitHub repository that hosts this site, or contact
+      the person who installed the app on your machine.
+    </p>
+  </main>
+</body>
+</html>
